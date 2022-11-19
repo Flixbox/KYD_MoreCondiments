@@ -2,6 +2,7 @@
 <ModMetaData>
 	<name>[KYD] More Condiments</name>
 	<author>Kayedon</author>
+	<url>https://steamcommunity.com/sharedfiles/filedetails/?id=2648970869</url>
 	<supportedVersions>
 		<li>1.3</li>
 		<li>1.4</li>
@@ -18,14 +19,19 @@
 		<li>VanillaExpanded.VCookE</li>
 		<li>oskarpotocki.vfe.insectoid</li>
 		<li>oskarpotocki.vfe.vikings</li>
+		<li>VanillaExpanded.VBrewE</li>
+		<li>vanillaexpanded.vplantse</li>
+		<li>sihv.rombones</li>
 	</loadAfter>
 	<packageId>KYD.MoreCondiments</packageId>
 
-	<description>Adds two new condiments for use in Vanilla Cooking Expanded or Sauced Meal recipes, to add some more uses to a few items I find myself drowning in.
+	<description>Adds several new condiments for use in Vanilla Cooking Expanded or Sauced Meal recipes, to add some more uses to a few items I find myself drowning in.
 	
 If Vanilla Factions Expanded - Insectoids is loaded, you can turn 10 Royal Jelly into Royal Jelly Preserves. Royal Jelly Preserves give +3 mood and +30% immunity gain speed for 6 hours.
 
-If Vanilla Factions Expanded - Vikings is loaded, you can turn 10 Honey into Honey Syrup. Honey Syrup gives +6 mood and +0.005 Diabetes (unless disabled).
+If Vanilla Factions Expanded - Vikings is loaded, you can turn 10 Honey into Honey Syrup. Honey Syrup gives +6 mood.
+
+Also includes uses for alcohol in Vanilla Brewing Expanded and the bones from Rim of Madness - Bones!
 
 Got some more condiment ideas? Let me know in the comments!
 	</description>

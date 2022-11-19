@@ -1,35 +1,338 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<RecipeDef>
-		<defName>KYD_RoyalInsectJellyPreserves</defName>
-		<label>make royal jelly preserves</label>
-		<description>Create royal insect jelly preserves from royal insect jelly. Smooth, rich, known for aiding in immunity from infections and diseases.</description>
-		<jobString>Making royal jelly preserves.</jobString>
+	<RecipeDef Name="KYD_Recipe_CondimentBase" Abstract="True">
 		<workSpeedStat>CookSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
 		<workAmount>200</workAmount>
+		<allowMixingIngredients>true</allowMixingIngredients>
 		<recipeUsers>
 			<li>VCE_CondimentPrepTable</li>
 		</recipeUsers>
+		<researchPrerequisite>VCE_CondimentsResearch</researchPrerequisite>
+	</RecipeDef>
+
+	<RecipeDef ParentName="KYD_Recipe_CondimentBase" MayRequire="ludeon.rimworld.biotech">
+		<defName>KYD_HemogenInfusedSauce</defName>
+		<label>make hemogen infused sauce</label>
+		<description>Create hemogen infused sauce from alcohol and blood. Tastes good and makes you not want to eat for a while. The alcohol evaporates in the process.</description>
+		<jobString>Making blood infused sauce.</jobString>
 		<ingredients>
 			<li>
 				<filter>
 					<thingDefs>
-						<li>VFEI_RoyalInsectJelly</li>
+						<li>HemogenPack</li>
 					</thingDefs>
 				</filter>
-				<count>10</count>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<categories>
+						<li MayRequire="vanillaexpanded.vbrewe">VBE_DrinksSimpleSpirits</li>
+						<li MayRequire="vanillaexpanded.vbrewe">VBE_DrinksLuxurySpirits</li>
+					</categories>
+					<thingDefs>
+						<li>Beer</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>VFEI_RoyalInsectJelly</li>
+				<li>Beer</li>
+				<li>HemogenPack</li>
 			</thingDefs>
+			<categories>
+				<li MayRequire="vanillaexpanded.vbrewe">VBE_DrinksSimpleSpirits</li>
+				<li MayRequire="vanillaexpanded.vbrewe">VBE_DrinksLuxurySpirits</li>
+			</categories>
 		</fixedIngredientFilter>
 		<products>
-			<KYD_RoyalInsectJellyPreserves>10</KYD_RoyalInsectJellyPreserves>
+			<KYD_HemogenInfusedSauce>10</KYD_HemogenInfusedSauce>
 		</products>
-		<researchPrerequisite>VCE_CondimentsResearch</researchPrerequisite>
 	</RecipeDef>
+
+	<RecipeDef ParentName="KYD_Recipe_CondimentBase">
+		<defName>KYD_CheeseSauce</defName>
+		<label>make cheese sauce</label>
+		<description>Create an extremely filling cheesy sauce that drastically reduces hunger rate for 24 hours when cooked into a meal.</description>
+		<jobString>Making cheese sauce.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>VCE_Cheese</li>
+					</categories>
+				</filter>
+				<count>4</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>VCE_Cheese</li>
+			</categories>
+		</fixedIngredientFilter>
+		<products>
+			<KYD_CheeseSauce>10</KYD_CheeseSauce>
+		</products>
+	</RecipeDef>
+
+	<RecipeDef ParentName="KYD_Recipe_CondimentBase" Name="KYD_Recipe_BrothBase" Abstract="True">
+		<workAmount>1000</workAmount>
+		<ingredientValueGetterClass>VanillaCookingExpanded.IngredientValueGetter_NutritionWithExtraIngredient</ingredientValueGetterClass>
+		<workSkill>Cooking</workSkill>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>VCE_Flour</li>
+				<li>VCE_Salt</li>
+				<li>VCE_RawSpices</li>
+				<li>KYD_Starch</li>
+				<li MayRequire="sihv.rombones">BoneItem</li>
+			</thingDefs>
+			<categories>
+				<li>FoodRaw</li>
+			</categories>
+			<disallowedCategories>
+				<li>EggsFertilized</li>
+			</disallowedCategories>
+			<disallowedThingDefs>
+				<li>Meat_Human</li>
+				<li>Meat_Megaspider</li>
+				<li>InsectJelly</li>
+			</disallowedThingDefs>
+		</defaultIngredientFilter>
+	</RecipeDef>
+
+	<RecipeDef ParentName="KYD_Recipe_BrothBase">
+		<defName>KYD_Recipe_BrothSimple</defName>
+		<label>cook simple meat broth</label>
+		<description>Cook some simple meat broth from one ingredient.</description>
+		<jobString>Cooking simple meat broth.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+					</categories>
+				</filter>
+				<count>1.0</count>
+			</li>
+		</ingredients>
+		<products>
+			<MealFine_Meat>1</MealFine_Meat>
+			<KYD_BrothSimple>10</KYD_BrothSimple>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs></thingDefs>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+		</fixedIngredientFilter>
+		<skillRequirements>
+			<Cooking>6</Cooking>
+		</skillRequirements>
+	</RecipeDef>
+
+	<RecipeDef ParentName="KYD_Recipe_BrothBase">
+		<defName>KYD_Recipe_BrothFine</defName>
+		<label>cook fine broth</label>
+		<description>Cook some somewhat complex broth from several ingredients.</description>
+		<jobString>Cooking fine broth.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+					</categories>
+				</filter>
+				<count>1.0</count>
+			</li>
+			<li>
+				<filter>
+					<categories>
+						<li>PlantFoodRaw</li>
+					</categories>
+				</filter>
+				<count>1.0</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VCE_RawSpices</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs></thingDefs>
+			<categories>
+				<li>FoodRaw</li>
+			</categories>
+			<specialFiltersToDisallow>
+				<li>AllowPlantFood</li>
+			</specialFiltersToDisallow>
+		</fixedIngredientFilter>
+		<products>
+			<MealFine_Meat>1</MealFine_Meat>
+			<KYD_BrothFine>10</KYD_BrothFine>
+		</products>
+		<skillRequirements>
+			<Cooking>6</Cooking>
+		</skillRequirements>
+	</RecipeDef>
+
+
+	<RecipeDef ParentName="KYD_Recipe_BrothBase">
+		<defName>KYD_Recipe_BrothLavish</defName>
+		<label>cook lavish broth</label>
+		<description>Cook some very complex broth from various ingredients. Much of the ingredients are wasted in order to create a broth that improves any food it comes into contact with.  Its flavour slightly enhances a few stats.</description>
+		<jobString>Cooking lavish broth.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+					</categories>
+				</filter>
+				<count>2.0</count>
+			</li>
+			<li>
+				<filter>
+					<categories>
+						<li>PlantFoodRaw</li>
+					</categories>
+				</filter>
+				<count>2.0</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VCE_RawSpices</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VCE_Salt</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li MayRequire="sihv.rombones">
+				<filter>
+					<thingDefs>
+						<li>BoneItem</li>
+					</thingDefs>
+				</filter>
+				<count>40</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li MayRequire="sihv.rombones">BoneItem</li>
+			</thingDefs>
+			<categories>
+				<li>FoodRaw</li>
+			</categories>
+			<specialFiltersToDisallow>
+				<li>AllowPlantFood</li>
+			</specialFiltersToDisallow>
+		</fixedIngredientFilter>
+		<products>
+			<MealFine>1</MealFine>
+			<KYD_BrothLavish>10</KYD_BrothLavish>
+		</products>
+		<skillRequirements>
+			<Cooking>8</Cooking>
+		</skillRequirements>
+	</RecipeDef>
+
+	<RecipeDef ParentName="KYD_Recipe_BrothBase">
+		<defName>KYD_Recipe_BrothGourmet</defName>
+		<label>cook gourmet broth</label>
+		<description>Cook a little bit of gourmet broth that severely improves any food it comes into contact with. Its flavour drastically enhances various stats.</description>
+		<jobString>Cooking gourmet broth.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+					</categories>
+				</filter>
+				<count>2.0</count>
+			</li>
+			<li>
+				<filter>
+					<categories>
+						<li>PlantFoodRaw</li>
+					</categories>
+				</filter>
+				<count>2.0</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>KYD_Starch</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VCE_RawSpices</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VCE_Salt</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VCE_Flour</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li MayRequire="sihv.rombones">
+				<filter>
+					<thingDefs>
+						<li>BoneItem</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li MayRequire="sihv.rombones">BoneItem</li>
+			</thingDefs>
+			<categories>
+				<li>FoodRaw</li>
+			</categories>
+			<specialFiltersToDisallow>
+				<li>AllowPlantFood</li>
+			</specialFiltersToDisallow>
+		</fixedIngredientFilter>
+		<products>
+			<MealFine>1</MealFine>
+			<KYD_BrothGourmet>5</KYD_BrothGourmet>
+		</products>
+		<skillRequirements>
+			<Cooking>10</Cooking>
+		</skillRequirements>
+	</RecipeDef>
+
 </Defs>
