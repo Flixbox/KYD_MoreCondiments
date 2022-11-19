@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <loadFolders>
+	<v1.3>
+		<li IfModActive="oskarpotocki.vfe.vikings">1.3/Mods/VFactionsE-Vikings</li>
+		<li IfModActive="oskarpotocki.vfe.insectoid">1.3/Mods/VFactionsE-Insectoids</li>
+	</v1.3>
 	<v1.4>
-		<li>/</li>
-		<li IfModActive="oskarpotocki.vfe.vikings">Mods/VFactionsE-Vikings</li>
-		<li IfModActive="oskarpotocki.vfe.insectoid">Mods/VFactionsE-Insectoids</li>
+		<li>1.4/</li>
+		<li IfModActive="oskarpotocki.vfe.vikings">1.4/Mods/VFactionsE-Vikings</li>
+		<li IfModActive="oskarpotocki.vfe.insectoid">1.4/Mods/VFactionsE-Insectoids</li>
 	</v1.4>
 </loadFolders>

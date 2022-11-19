@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ======= Ingredient based thoughts ========= -->
+	<ThoughtDef>
+		<thoughtClass>VanillaCookingExpanded.Thought_Hediff</thoughtClass>
+		<hediff>KYD_ConsumedHemogenInfusedSauce</hediff>
+		<defName>KYD_ConsumedHemogenInfusedSauce</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>consumed hemogen infused sauce</label>
+				<description>That was pretty tasty, but I don't feel like eating for a while.</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<thoughtClass>VanillaCookingExpanded.Thought_Hediff</thoughtClass>
+		<hediff>KYD_ConsumedStarch</hediff>
+		<defName>KYD_ConsumedStarch</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>consumed starch</label>
+				<description>That starch was really filling.</description>
+				<baseMoodEffect>1</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<thoughtClass>VanillaCookingExpanded.Thought_Hediff</thoughtClass>
+		<hediff>KYD_ConsumedDextrose</hediff>
+		<defName>KYD_ConsumedDextrose</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>consumed dextrose</label>
+				<description>That dextrose was really tasty.</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<thoughtClass>VanillaCookingExpanded.Thought_Hediff</thoughtClass>
+		<hediff>KYD_ConsumedAmbrosia</hediff>
+		<defName>KYD_ConsumedAmbrosia</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>consumed ambrosia sauce</label>
+				<description>That ambrosia sauce was divine.</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<thoughtClass>VanillaCookingExpanded.Thought_Hediff</thoughtClass>
+		<hediff>KYD_ConsumedJam</hediff>
+		<defName>KYD_ConsumedJam</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>consumed jam</label>
+				<description>Sweet and fruity!</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<thoughtClass>VanillaCookingExpanded.Thought_Hediff</thoughtClass>
+		<hediff>KYD_ConsumedCondensedMilk</hediff>
+		<defName>KYD_ConsumedCondensedMilk</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>consumed condensed milk</label>
+				<description>That was pretty tasty. It makes me feel nostalgic.</description>
+				<baseMoodEffect>4</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<thoughtClass>VanillaCookingExpanded.Thought_Hediff</thoughtClass>
+		<hediff>KYD_ConsumedCheeseSauce</hediff>
+		<defName>KYD_ConsumedCheeseSauce</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>consumed cheese sauce</label>
+				<description>That was pretty tasty. I feel extremely full.</description>
+				<baseMoodEffect>4</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<thoughtClass>VanillaCookingExpanded.Thought_Hediff</thoughtClass>
+		<defName>KYD_ConsumedBrothSimple</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>consumed simple broth</label>
+				<description>That was rather tasty.</description>
+				<baseMoodEffect>1</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<thoughtClass>VanillaCookingExpanded.Thought_Hediff</thoughtClass>
+		<defName>KYD_ConsumedBrothFine</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>consumed fine broth</label>
+				<description>That was pretty tasty!</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<thoughtClass>VanillaCookingExpanded.Thought_Hediff</thoughtClass>
+		<defName>KYD_ConsumedBrothLavish</defName>
+		<hediff>KYD_ConsumedBrothLavish</hediff>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>consumed lavish broth</label>
+				<description>That was incredibly tasty!</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<thoughtClass>VanillaCookingExpanded.Thought_Hediff</thoughtClass>
+		<defName>KYD_ConsumedBrothGourmet</defName>
+		<hediff>KYD_ConsumedBrothGourmet</hediff>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>consumed gourmet broth</label>
+				<description>The best broth I've ever tasted. I don't want to eat anything else ever again.</description>
+				<baseMoodEffect>10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+
+</Defs>
