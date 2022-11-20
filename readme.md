@@ -51,3 +51,4 @@ There are several kinds of broths, each providing more boosts to the entire body
 - mustard sauce (Mood boost, energy boost (manipulation + movement))
 - carrot sauce (vision)
 - Pumpkin seeds (armour)
+- Pumpkin puree (needs creativity)
