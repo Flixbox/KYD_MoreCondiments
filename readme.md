@@ -50,4 +50,4 @@ There are several kinds of broths, each providing more boosts to the entire body
 - Salsa (Makes u Flirty + Heat)
 - mustard sauce (Mood boost, energy boost (manipulation + movement))
 - carrot sauce (vision)
-- essence of iron skin (armour) - needs creativity
+- Pumpkin seeds (armour)
