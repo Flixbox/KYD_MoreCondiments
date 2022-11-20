@@ -53,6 +53,8 @@ There are several kinds of broths, each providing more boosts to the entire body
 
 Recipe:
 
+Pumpkin process
+
 - Shredded Pumpkin seeds 
 - Pumpkin puree 
 
